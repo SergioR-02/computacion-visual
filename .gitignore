@@ -1,0 +1,37 @@
+# 🌐 Node.js / Three.js
+node_modules/
+.env
+.DS_Store
+*.log
+dist/
+build/
+.vscode/
+
+# 🎮 Unity
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+MemoryCaptures/
+.vscode/
+*.csproj
+*.unityproj
+*.sln
+*.user
+
+# 🔬 Colab / Jupyter
+.ipynb_checkpoints/
+*.pyc
+__pycache__/
+.env
+
+# 🌀 Processing
+*.class
+*.jar
+*.exe
+*.log
+*.tmp
+*.svg
+*.zip
