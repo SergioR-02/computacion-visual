@@ -111,7 +111,7 @@ void draw() {
 ### Resultado:
 El cubo se mueve de forma ondulatoria, rota continuamente y cambia de tamaño cíclicamente, creando un efecto dinámico en 3D.
 
-![Resultado Processing](public/PROCESSING.png)
+![Resultado Processing](./threejs/React3D-Playground/public/PROCESSING.png)
 
 ---
 
@@ -148,7 +148,7 @@ meshRef.current.scale.set(scale, scale, scale);
 ### Resultado:
 El cubo reacciona a movimientos sinusoidales, rota continuamente y cambia de tamaño de forma suave, ofreciendo una experiencia visual interactiva.
 
-![Resultado Three.js](public/resultTHREEJJ.png)
+![Resultado Three.js](./threejs/React3D-Playground/public/resultTHREEJJ.png)
 
 ---
 ## 🚀 Ejecución
