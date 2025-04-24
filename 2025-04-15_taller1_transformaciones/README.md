@@ -1,24 +1,32 @@
-# Taller de Transformaciones Básicas
+# Taller 1: Transformaciones Visuales
 
-Este repositorio contiene implementaciones de transformaciones geométricas básicas —**traslación**, **rotación** y **escalado**— en tres entornos distintos:
+🧪 **Nombre del Taller**  
+Taller 1: Transformaciones Visuales
 
-- Python (con NumPy y Matplotlib)
+📅 **Fecha**  
+2025-04-15 – Fecha de entrega
+
+🎯 **Objetivo del Taller**  
+Explorar y aplicar transformaciones geométricas (traslación, rotación y escalado) en diferentes entornos de programación para comprender su implementación y visualización.
+
+🧠 **Conceptos Aprendidos**  
+- Transformaciones geométricas (escala, rotación, traslación)
+- Animación de objetos en 2D y 3D
+- Uso de librerías y frameworks para visualización gráfica
+
+🔧 **Herramientas y Entornos**  
+- Python (Matplotlib, NumPy, ImageIO)
 - Processing (modo P3D)
-- Three.js con React (usando React Three Fiber)
+- Three.js / React Three Fiber
 
----
-
-## 📌 Tabla de Contenido
-
-- [Python](#python)
-- [Processing](#processing)
-- [Three.js con React](#threejs-con-react)
-- [Ejecución](#ejecución)
-
----
-
-
-
+📁 **Estructura del Proyecto**  
+```
+2025-04-15_taller1_transformaciones/
+├── python/                 # Implementación en Python
+├── processing/             # Implementación en Processing
+├── threejs/                # Implementación en Three.js
+├── README.md               # Documentación del taller
+```
 
 ## 🐍 1. Transformaciones con Matplotlib (Python)
 
@@ -148,7 +156,7 @@ meshRef.current.scale.set(scale, scale, scale);
 ### Resultado:
 El cubo reacciona a movimientos sinusoidales, rota continuamente y cambia de tamaño de forma suave, ofreciendo una experiencia visual interactiva.
 
-![Resultado Three.js](./threejs/React3D-Playground/public/resultTHREEJJ.png)
+[Link para ver animación](https://computacion-visual.vercel.app)
 
 ---
 ## 🚀 Ejecución
@@ -192,6 +200,21 @@ Abre tu navegador en: http://localhost:5173
 - **Processing:** [AnimatedCube3D.pde](processing/AnimatedCube3D/AnimatedCube3D.pde)
 - **Three.js + React:** [React3D-Playground](threejs/React3D-Playground/)
 
-
 ## ✍️ Autor
 Sergio Alejandro Ruiz Hurtado
+
+🧩 **Prompts Usados**  
+- "Explicame el paso a paso para usar threrjs"
+- "Pasa este escrito a formato Markdown"
+- "Como crear un cubo 3D en processing."
+- "Aprtir del codigo en python exporta automaricamente el gift resulatnte"
+
+💬 **Reflexión Final**  
+Este taller permitió reforzar conceptos fundamentales de transformaciones geométricas y su implementación en diferentes entornos. La parte más interesante fue observar cómo las mismas transformaciones se aplican de manera similar en Python, Processing y Three.js, pero con diferencias en las herramientas y sintaxis. En futuros proyectos, sería interesante explorar transformaciones más complejas, como proyecciones en perspectiva o deformaciones no lineales.
+
+✅ **Checklist de Entrega**  
+- [x] Carpeta `2025-04-15_taller1_transformaciones`
+- [x] Código limpio y funcional
+- [x] GIF incluido con nombre descriptivo
+- [x] README completo y claro
+- [x] Commits descriptivos en inglés
