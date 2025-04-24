@@ -1,35 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Canvas } from '@react-three/fiber'
+import { OrbitControls, Stats } from '@react-three/drei'
+import Model from './Model'
+import UI from './UI'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div style={{
+      height: '100vh', // Ocupa toda la altura de la ventana
+      display: 'flex',
+      flexDirection: 'column',
+    }}>
+      {/* UI en la parte superior */}
+      <div style={{
+        zIndex: 10, // Asegura que UI esté sobre el canvas
+        position: 'relative',
+        flexShrink: 0, // Impide que el UI se reduzca
+      }}>
+        <UI />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+
+      {/* Canvas ocupa el resto del espacio */}
+      <div style={{ flex: 1 }}>
+        <Canvas camera={{ position: [50, 0, 15], fov: 60 }}>
+          <ambientLight />
+          <pointLight position={[10, 10, 10]} />
+          <OrbitControls />
+          <Model />
+          <Stats />
+        </Canvas>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
-
-export default App
