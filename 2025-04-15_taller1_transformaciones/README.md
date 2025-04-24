@@ -119,7 +119,7 @@ void draw() {
 ### Resultado:
 El cubo se mueve de forma ondulatoria, rota continuamente y cambia de tamaño cíclicamente, creando un efecto dinámico en 3D.
 
-![Resultado Processing](./threejs/React3D-Playground/public/PROCESSING.png)
+![Resultado Processing](./processing/Animation.gif)
 
 ---
 
