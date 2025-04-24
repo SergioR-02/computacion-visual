@@ -204,10 +204,10 @@ Abre tu navegador en: http://localhost:5173
 Sergio Alejandro Ruiz Hurtado
 
 🧩 **Prompts Usados**  
-- "Explicame el paso a paso para usar threrjs"
-- "Pasa este escrito a formato Markdown"
+- "Explicame el paso a paso para usar threejs"
+- "Quiero que pases este escrito a formato Markdown"
 - "Como crear un cubo 3D en processing."
-- "Aprtir del codigo en python exporta automaricamente el gift resulatnte"
+- "Apartir del codigo en python exporta automaticamente el gift resultante"
 
 💬 **Reflexión Final**  
 Este taller permitió reforzar conceptos fundamentales de transformaciones geométricas y su implementación en diferentes entornos. La parte más interesante fue observar cómo las mismas transformaciones se aplican de manera similar en Python, Processing y Three.js, pero con diferencias en las herramientas y sintaxis. En futuros proyectos, sería interesante explorar transformaciones más complejas, como proyecciones en perspectiva o deformaciones no lineales.
