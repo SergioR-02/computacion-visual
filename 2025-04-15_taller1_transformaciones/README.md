@@ -25,6 +25,7 @@ Explorar y aplicar transformaciones geométricas (traslación, rotación y escal
 ├── python/                 # Implementación en Python
 ├── processing/             # Implementación en Processing
 ├── threejs/                # Implementación en Three.js
+├── resultados/             # Gift de animaciones obtenidas
 ├── README.md               # Documentación del taller
 ```
 
@@ -72,7 +73,7 @@ def escala(sx, sy):
 ### Resultado:
 El cuadrado se traslada, rota y escala de manera continua, generando un movimiento fluido en un espacio bidimensional.
 
-![GIF de transformaciones](python/transformaciones.gif)
+![GIF de transformaciones](resultados/PythonAnimation.gif)
 
 
 
@@ -119,8 +120,7 @@ void draw() {
 ### Resultado:
 El cubo se mueve de forma ondulatoria, rota continuamente y cambia de tamaño cíclicamente, creando un efecto dinámico en 3D.
 
-![Resultado Processing](./processing/Animation.gif)
-
+![Resultado Processing](resultados/ProcessingAnimation.gif)
 ---
 
 ## 🌐 3. Cubo Reactivo en 3D (Three.js + React)
@@ -157,6 +157,7 @@ meshRef.current.scale.set(scale, scale, scale);
 El cubo reacciona a movimientos sinusoidales, rota continuamente y cambia de tamaño de forma suave, ofreciendo una experiencia visual interactiva.
 
 [Link para ver animación](https://computacion-visual.vercel.app)
+![Resultado Processing](resultados/ThreejsAnimation.gif)
 
 ---
 ## 🚀 Ejecución
