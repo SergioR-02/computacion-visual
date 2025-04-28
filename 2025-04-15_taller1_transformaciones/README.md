@@ -25,7 +25,7 @@ Explorar y aplicar transformaciones geométricas (traslación, rotación y escal
 ├── python/                 # Implementación en Python
 ├── processing/             # Implementación en Processing
 ├── threejs/                # Implementación en Three.js
-├── resultados/             # Gift de animaciones obtenidas
+├── resultados/             # Gifs de animaciones obtenidas
 ├── README.md               # Documentación del taller
 ```
 

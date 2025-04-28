@@ -4,6 +4,8 @@ export default function UI() {
   const view = useModelViewStore((state) => state.view)
   const setView = useModelViewStore((state) => state.setView)
   const vertexCount = useModelViewStore((state) => state.vertexCount)
+  const faceCount = useModelViewStore((state) => state.faceCount)
+  const edgeCount = useModelViewStore((state) => state.edgeCount)
 
   return (
     <div style={{
@@ -23,8 +25,9 @@ export default function UI() {
       <button onClick={() => setView('points')} style={{ margin: 2 }}>Points</button>
 
       <div style={{ marginTop: 10 }}>
-        <div><strong>Modelo:</strong> model.obj</div>
         <div><strong>Vértices:</strong> {vertexCount}</div>
+        <div><strong>Caras:</strong> {faceCount}</div>
+        <div><strong>Aristas:</strong> {edgeCount}</div>
       </div>
     </div>
   )
