@@ -67,7 +67,7 @@ Explica el proceso:
 
 ### 🔹 Código relevante
 
-#### Python (trimesh + vedo)  
+### Python (trimesh + vedo)  
 _Explicación:_ Se crea una visualización estática de los vértices, aristas y caras de una malla tridimensional usando vedo, una biblioteca para visualización 3D en Python. Luego, genera una animación (rotacion.gif) donde la malla rota 360° alrededor de su eje, mostrando su estructura desde diferentes ángulos.
 
 ```python
@@ -100,10 +100,7 @@ def generar_animacion():
 generar_animacion()
 ```
 
-![Resultado Python](resultados/PythonAnimation.gif)
-![Resultado Processing](resultados/PythonRotacion.gif)
-
-#### React Three Fiber (App.jsx)
+### React Three Fiber (App.jsx)
 
 _Explicación:_ Este código implementa una aplicación web 3D que permite cargar un modelo OBJ y alternar entre diferentes vistas (wireframe, edges, points). El componente `Model` se encarga de cargar el modelo y calcular los contadores de vértices, aristas y caras, mientras que el componente `UI` proporciona una interfaz para cambiar las vistas y mostrar los contadores. El componente principal `App` integra todo en un lienzo 3D interactivo.
 
@@ -143,7 +140,20 @@ export default function App() {
   )
 }
 ```
+
+
+## 📊 Resultados Visuales
+### Python   
+Se observa el modelo, en este caso un lobo, con caras de color amarillo, vertices rojos y aristas 
+![Resultado Python](resultados/PythonAnimation.gif)
+![Resultado Processing](resultados/PythonRotacion.gif)
+
+
+
+### React  
+Interfaz interactiva
 ![Resultado Processing](resultados/ThreejsAnimation.gif)
+
 
 
 ---
