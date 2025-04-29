@@ -156,7 +156,6 @@ meshRef.current.scale.set(scale, scale, scale);
 ### Resultado:
 El cubo reacciona a movimientos sinusoidales, rota continuamente y cambia de tamaño de forma suave, ofreciendo una experiencia visual interactiva.
 
-[Link para ver animación](https://computacion-visual.vercel.app)
 ![Resultado Processing](resultados/ThreejsAnimation.gif)
 
 ---
