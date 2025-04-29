@@ -7,7 +7,7 @@
 
 ##  🎯  Objetivo del Taller
 
-Entender los fundamentos de la percepción visual artificial mediante el procesamiento de imágenes en escala de grises, la aplicación de filtros convolucionales y la detección básica de bordes. Utilizamos OpenCV en Python para explorar cómo los computadores "ven" e interpretan estructuras visuales básicas.
+Entender los fundamentos de la percepción visual artificial mediante el procesamiento de imágenes en escala de grises, la aplicación de filtros convolucionales y la detección básica de bordes. Se utuilizo OpenCV en Python para explorar cómo los computadores "ven" e interpretan estructuras visuales básicas.
 
 ---
 
@@ -34,10 +34,11 @@ Entender los fundamentos de la percepción visual artificial mediante el procesa
 ```
 2025-04-29_taller_ojos_digitales/
 ├── python/
-│   └── taller_ojos_digitales.py  ← Código fuente
+│   └── visionArtificial.ipynb  ← Código fuente
 ├── resultados/
-│   ├── filtros_comparacion.png
-│   └── sliders_dinamicos.gif
+│   └── PythonAnimation.gif #resultados obtenidos
+├── datos/
+│   └── imagen.jpg #
 ├── README.md
 ```
 
@@ -110,8 +111,6 @@ cv2.destroyAllWindows()
 ```
 
 ## 📊 Resultados Visuales
-
-Se visualiza una jerarquía de objetos 3D conectados mediante grupos (<group>) en React Three Fiber. Al manipular sliders de rotación y traslación aplicados al grupo padre, se observa cómo toda la estructura se transforma en conjunto. El cubo naranja (hijo) se traslada respecto al padre, la esfera azul (nieto) se posiciona encima del cubo, y el cono verde (biznieto) se ubica sobre la esfera.
 
 ![Resultado Threejs](resultados/PythonAnimation.gif)
 
