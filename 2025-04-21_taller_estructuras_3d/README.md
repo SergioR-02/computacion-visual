@@ -41,7 +41,7 @@ Especifica los entornos usados:
 ```
 2025-04-28_taller_construyendo_mundo_3d/
 ├── python/              # Implentacion python/
-├── React/               # Implentacion react/
+├── threejs/             # Implentacion react usando threejs/
 ├── datos/               # Modelos usados wolf.obj, Corona.obj
 ├── resultados/          # Gifs resultantes
 ├── README.md
