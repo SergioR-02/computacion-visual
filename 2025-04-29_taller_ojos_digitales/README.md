@@ -116,7 +116,7 @@ cv2.destroyAllWindows()
 
 ## 🧩 Prompts Usados
 
-- Explicame el pas a apaos para aplicar filtros con opencv en python
+- Explicame el paso a paso para aplicar filtros con opencv en python
 - Como puedo usar la webcam para procesar imagenes en tiempo real
 - Explicame el paso a paso para agregar sliders con cv2.createTrackbar para modificar en vivo parámetros
 
