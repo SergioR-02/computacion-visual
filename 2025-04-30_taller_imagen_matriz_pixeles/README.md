@@ -1,7 +1,7 @@
 # 🧪 De Píxeles a Coordenadas: Explorando la Imagen como Matriz
 
 ## 📅 Fecha  
-`2025-04-30` – Fecha de entrega
+`2025-04-30`
 
 ---
 
