@@ -70,6 +70,7 @@ Explorar técnicas básicas de segmentación de imágenes mediante binarización
 ---
 
 ### 🔹 Código relevante
+El código aplica segmentación adaptativa para binarizar la imagen y luego detecta contornos con cv2.findContours(). Para cada forma encontrada, calcula el centro de masa con cv2.moments() y dibuja un círculo rojo. También genera una bounding box para cada contorno, representada como un rectángulo azul sobre la imagen. 
 
 ```python
 # Segmentación binaria adaptativa + detección de contornos
@@ -104,7 +105,7 @@ for cnt in contours:
 ![Resultado](resultados/CentroMasa.png)
 
 ### Procesar imagenes desde webcam
-![Resultado](resultados/Sliders.gif)
+![Resultado](resultados/DeteccionWebcam.gif)
 
 ## 🧩 Prompts Usados
 
@@ -115,8 +116,7 @@ for cnt in contours:
 ---
 
 ## 💬 Reflexión Final
-A lo largo de la realizacion de este taller pude consolidar conocimientos sobre procesamiento de imágenes, especialmente en técnicas de binarización y análisis morfológico básico. Aprendí a diferenciar cuándo es mejor usar umbral fijo versus adaptativo y a interpretar métricas como área y perímetro de formas segmentadas.
+A lo largo de este taller, pude reforzar mis conocimientos en procesamiento de imágenes, especialmente en técnicas de binarización y análisis morfológico. Aprendí a elegir entre umbral fijo y adaptativo según las necesidades del momento, y también a interpretar métricas como el área y el perímetro de las formas segmentadas.
 
-La parte más interesante fue detectar y visualizar contornos junto a sus centros de masa, ya que permitió una interpretación visual clara del análisis. En futuros proyectos, integraría procesamiento en tiempo real desde webcam para crear una herramienta interactiva de detección de formas. También considero agregar métricas más avanzadas como circularidad o elongación para refinar el análisis de formas detectadas.
-
+Lo más interesante fue poder detectar y visualizar los contornos y centros de masa, ya que me permitió entender mejor cómo se estructuran las formas dentro de una imagen. En futuros proyectos, me gustaría trabajar con procesamiento en tiempo real desde la webcam, creando una herramienta interactiva para la detección de formas. También me gustaría explorar métricas más avanzadas, como la circularidad o la elongación, para mejorar el análisis de las formas detectadas.
 
