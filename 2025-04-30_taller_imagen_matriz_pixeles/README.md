@@ -22,6 +22,7 @@ Explorar cómo una imagen digital puede ser representada como una matriz numéri
 ✅ Visualización de histogramas de intensidad para entender la distribución de los valores de color en una imagen.
 
 ✅ Ajuste manual y automático de brillo y contraste aplicando fórmulas matemáticas para modificar estos parámetros y utilizamos funciones optimizadas de OpenCV como cv2.convertScaleAbs() para hacerlo de forma eficiente.
+
 ---
 
 ## 🔧 Herramientas y Entornos
@@ -29,7 +30,6 @@ Explorar cómo una imagen digital puede ser representada como una matriz numéri
 - Python (`opencv-python`, `numpy`, `matplotlib`)
 - Jupyter / Google Colab
 
-📌 Usa las herramientas según la [guía de instalación oficial](./guia_instalacion_entornos_visual.md)
 
 ---
 
