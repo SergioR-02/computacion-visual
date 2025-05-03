@@ -13,21 +13,13 @@ Explorar técnicas básicas de segmentación de imágenes mediante binarización
 ## 🧠 Conceptos Aprendidos
 
 ✅ Segmentación de imágenes: Binarización mediante umbral fijo y adaptativo.
-
 ✅ Detección de contornos: Localización de bordes y formas en imágenes binarizadas.
-
 ✅ Cálculo de momentos: Uso de cv2.moments() para encontrar centros de masa.
-
 ✅ Bounding boxes: Detección y visualización de rectángulos delimitadores.
-
 ✅ Transformaciones geométricas: Representación de objetos mediante áreas, perímetros y centroides.
-
 ✅ Procesamiento morfológico básico: Identificación y análisis de formas simples.
-
 ✅ Visualización científica: Uso de matplotlib y OpenCV para graficar resultados procesados.
-
 ✅ Manejo de estructuras jerárquicas de contornos: Parámetros de cv2.findContours() (RETR_EXTERNAL vs. otros).
-
 ✅ Manejo de tipos de umbral adaptativo: Diferencias entre ADAPTIVE_THRESH_MEAN_C y GAUSSIAN_C.
 
 ---
