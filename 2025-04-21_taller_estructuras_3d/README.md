@@ -33,8 +33,6 @@ Especifica los entornos usados:
 - React / JavaScript (`@react-three/fiber`, `@react-three/drei`, `three`)
 - Node.js / npm para gestionar dependencias de Three.js
 
-📌 Usa las herramientas según la [guía de instalación oficial](./guia_instalacion_entornos_visual.md)
-
 ---
 
 ## 📁 Estructura del Proyecto
