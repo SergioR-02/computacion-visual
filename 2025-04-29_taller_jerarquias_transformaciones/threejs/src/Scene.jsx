@@ -7,15 +7,32 @@ export default function Scene() {
   const childRef = useRef()
   const grandChildRef = useRef()
 
+  // Controles para el grupo padre
   const { posX, rotY } = useControls('Parent Transform', {
     posX: { value: 0, min: -5, max: 5, step: 0.1 },
     rotY: { value: 0, min: -Math.PI, max: Math.PI, step: 0.01 }
+  })
+
+  // Controles para el hijo
+  const { childRotY } = useControls('Child Transform', {
+    childRotY: { value: 0, min: -Math.PI, max: Math.PI, step: 0.01 }
+  })
+
+  // Controles para el nieto
+  const { grandChildRotZ } = useControls('Grandchild Transform', {
+    grandChildRotZ: { value: 0, min: -Math.PI, max: Math.PI, step: 0.01 }
   })
 
   useFrame(() => {
     if (parentRef.current) {
       parentRef.current.position.x = posX
       parentRef.current.rotation.y = rotY
+    }
+    if (childRef.current) {
+      childRef.current.rotation.y = childRotY
+    }
+    if (grandChildRef.current) {
+      grandChildRef.current.rotation.z = grandChildRotZ
     }
   })
 
@@ -28,17 +45,17 @@ export default function Scene() {
           <meshStandardMaterial color="orange" />
         </mesh>
 
-        {/* Nieto: esfera azul encima del cubo */}
+        {/* Nieto: dodecaedro azul encima del cubo */}
         <group ref={grandChildRef} position={[0, 1.5, 0]}>
           <mesh>
-            <sphereGeometry args={[0.5, 32, 32]} />
+            <dodecahedronGeometry args={[0.5, 0]} />
             <meshStandardMaterial color="skyblue" />
           </mesh>
 
-          {/* Biznieto (cuarto nivel, opcional): cono verde sobre la esfera */}
+          {/* Biznieto: toro rosa encima del dodecaedro */}
           <mesh position={[0, 1.2, 0]}>
-            <coneGeometry args={[0.3, 0.7, 32]} />
-            <meshStandardMaterial color="green" />
+            <torusGeometry args={[0.3, 0.1, 16, 100]} />
+            <meshStandardMaterial color="hotpink" />
           </mesh>
         </group>
       </group>

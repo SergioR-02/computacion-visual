@@ -99,7 +99,7 @@ for y, xl, xr in zip(range(y1, y3), x13, x_left):
 ### Algoritmo de Bresenham para líneas
 ![Resultado](resultados/Linea.png)
 
-### # Algoritmo de punto medio para círculos
+### Algoritmo de punto medio para círculos
 ![Resultado](resultados/circulo.png)
 
 ### Relleno de triángulo por scanline

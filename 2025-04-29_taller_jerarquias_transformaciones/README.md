@@ -90,7 +90,9 @@ Este código define una jerarquía 3D en React Three Fiber usando <group>, donde
 
 ## 📊 Resultados Visuales
 
-Se visualiza una jerarquía de objetos 3D conectados mediante grupos (<group>) en React Three Fiber. Al manipular sliders de rotación y traslación aplicados al grupo padre, se observa cómo toda la estructura se transforma en conjunto. El cubo naranja (hijo) se traslada respecto al padre, la esfera azul (nieto) se posiciona encima del cubo, y el cono verde (biznieto) se ubica sobre la esfera.
+Se visualiza una jerarquía de objetos 3D conectados mediante grupos (<group>) en React Three Fiber. Al manipular sliders de rotación y traslación aplicados al grupo padre, se observa cómo toda la estructura se transforma en conjunto.
+El cubo naranja (hijo) se traslada respecto al padre, el dodecaedro azul (nieto) se posiciona encima del cubo, y el toro rosado (biznieto) se ubica sobre el dodecaedro.
+Cada nivel de la jerarquía también posee sus propios controles de rotación, permitiendo observar claramente cómo las transformaciones en un nivel afectan a todos sus descendientes de forma encadenada.
 
 ![Resultado Threejs](resultados/ThreejsAnimation.gif)
 
