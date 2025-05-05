@@ -1,0 +1,53 @@
+/* Estilo base */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #eaeef1;
+}
+
+/* Asegura que el canvas llene el fondo */
+canvas {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Contenedor flotante para controles */
+.ui-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 10;
+}
+
+/* Tarjetas de controles */
+.ui-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  min-width: 200px;
+  transition: all 0.3s ease;
+}
+
+/* Selector */
+.select-format {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Panel de información */
+.info-panel p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #333;
+}
