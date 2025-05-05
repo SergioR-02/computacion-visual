@@ -120,4 +120,7 @@ img_cv_edges = cv2.filter2D(img, -1, kernel_sobel_x) + cv2.filter2D(img, -1, ker
 ## 💬 Reflexión Final
 En la realizacion del taller pude profundizar en cómo los filtros modifican visualmente una imagen a través de matrices de convolución. Reforcé el uso de NumPy para operar directamente sobre píxeles y entendí las diferencias numéricas y visuales entre los filtros manuales y los predefinidos de OpenCV.
 
-La parte más desafiante fue construir una interfaz interactiva que respondiera en tiempo real a cambios en los valores del kernel, especialmente cuando se deben mantener estables los bordes y evitar distorsiones. Sin embargo, fue gratificante ver la visualización comparativa funcionando correctamente. En el futuro, me gustaría integrar estos filtros en un sistema más dinámico, como una aplicación web o un sistema de análisis en tiempo real con cámara.
+La parte más desafiante fue construir una interfaz interactiva que respondiera en tiempo real a cambios en los valores del kernel, especialmente cuando se deben mantener estables los bordes y evitar distorsiones. Sin embargo, fue gratificante ver la visualización comparativa funcionando correctamente. 
+
+En general, este fue un taller muy completo que combinó teoría, práctica y creatividad. Me dio una base sólida para seguir explorando temas más avanzados como visión por computadora en tiempo real o tambien me gustaría integrar estos filtros en un sistema más dinámico, como una aplicación web.
+

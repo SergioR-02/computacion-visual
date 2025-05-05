@@ -1,7 +1,7 @@
 # 🧪 Análisis de Figuras Geométricas: Centroide, Área y Perímetro
 
 ## 📅 Fecha
-`2025-05-03` – Fecha de entrega o realización
+`2025-05-03` – Realización
 
 ---
 
