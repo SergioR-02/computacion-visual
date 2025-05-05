@@ -4,21 +4,25 @@ import { OrbitControls } from '@react-three/drei';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 import { STLLoader } from 'three/examples/jsm/loaders/STLLoader';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import * as THREE from 'three';
 
 export default function ModelViewer({ format, onModelLoaded }) {
   const objModel = useLoader(OBJLoader, '/model.obj');
-  const stlModel = useLoader(STLLoader, '/model.stl');
+  const stlGeometry = useLoader(STLLoader, '/model.stl');
   const glbModel = useLoader(GLTFLoader, '/model.glb');
+
+  // Convertir STL geometry en mesh
+  const stlMesh = new THREE.Mesh(stlGeometry, new THREE.MeshStandardMaterial({ color: 'gray' }));
 
   useEffect(() => {
     if (format === 'OBJ') {
       onModelLoaded(objModel);
     } else if (format === 'STL') {
-      onModelLoaded(stlModel);
+      onModelLoaded(stlMesh);
     } else if (format === 'GLB') {
-      onModelLoaded(glbModel.scene); // ¡OJO! `scene` es importante aquí
+      onModelLoaded(glbModel.scene);
     }
-  }, [format, objModel, stlModel, glbModel]);
+  }, [format, objModel, stlMesh, glbModel]);
 
   return (
     <>
@@ -27,7 +31,7 @@ export default function ModelViewer({ format, onModelLoaded }) {
       <OrbitControls />
       <Suspense fallback={null}>
         {format === 'OBJ' && <primitive object={objModel} />}
-        {format === 'STL' && <primitive object={stlModel} />}
+        {format === 'STL' && <primitive object={stlMesh} />}
         {format === 'GLB' && <primitive object={glbModel.scene} />}
       </Suspense>
     </>
