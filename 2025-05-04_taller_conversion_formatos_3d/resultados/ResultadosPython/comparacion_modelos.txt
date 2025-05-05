@@ -1,0 +1,5 @@
+Modelo          | Vertices   | Caras      | Duplicados   | Cerrado
+------------------------------------------------------------------
+base.obj        | 22084      | 35376      | 4395         | No
+base.stl        | 17689      | 35376      | 0            | Sí
+base_basic_pbr.glb | 22084      | 35376      | 4395         | No
