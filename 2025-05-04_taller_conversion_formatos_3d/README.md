@@ -121,7 +121,10 @@ if modelo.is_volume:
 
 ### 🌐 React Three Fiber (App.jsx)
 
-Epa
+- Permitir la visualización comparativa en tiempo real de diferentes formatos de modelo 3D.
+- Mostrar información geométrica relevante (como el número de vértices).
+- Brindar una interfaz limpia y controlable para alternar entre formatos desde una UI simple.
+- Preparar la base para extender el proyecto a tareas más complejas como análisis de geometría, comparación de materiales, optimización de modelos o exportación.
 
 ```jsx
 import React, { useEffect, Suspense } from 'react';
