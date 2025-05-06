@@ -9,6 +9,7 @@
 ## 🎯 Objetivo del Taller
 
 El objetivo principal de este taller es aprender a generar objetos y escenas 3D de manera programática utilizando Python. Se busca explorar cómo crear geometría 3D flexiblemente a partir de datos estructurados (como archivos CSV o JSON), empleando bucles y condicionales para controlar parámetros como posición, forma, tamaño y color, y finalmente exportar las escenas resultantes a formatos estándar como OBJ, STL o PLY.
+
 ---
 
 ## 🧠 Conceptos Aprendidos
@@ -51,7 +52,7 @@ Especifica los entornos usados:
 ├── python/        # Notebook con el código del taller
 │ ├── exports/     # Carpeta con los archivos 3D exportados
 ├── resultados/    # Carpeta para resultados visuales
-└── README.md # Este archivo de documentación
+└── README.md      # Este archivo de documentación
 ```
 ## 🧪 Implementación
 

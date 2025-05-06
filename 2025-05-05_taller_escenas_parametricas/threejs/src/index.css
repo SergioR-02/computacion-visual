@@ -1,0 +1,25 @@
+/* index.css */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: #d8d8d8;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Personaliza Leva */
+.leva {
+  z-index: 10;
+  font-size: 14px;
+  background: rgba(20, 20, 20, 0.9) !important;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
