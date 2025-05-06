@@ -48,6 +48,7 @@ Especifica los entornos usados:
 ## 📁 Estructura del Proyecto
 ```
 2025-05-05_taller_escenas_parametricas/
+├── threejs/
 ├── datos/         # Archivo de datos de entrada
 ├── python/        # Notebook con el código del taller
 │ ├── exports/     # Carpeta con los archivos 3D exportados
@@ -71,7 +72,10 @@ Explica el proceso:
    - **Open3D:** Se transformaron a `TriangleMesh` (con triangulación y normales) y se exportaron individualmente en `.ply`.
 
 #### 🌐 React.js
-
+1. Generación programática de una lista de objetos con coordenadas y parámetros.
+2. Parametrización de propiedades usando `Leva`.
+3. Renderizado de la escena con `Three.js` y animación por frame.
+4. Captura de resultados animados con Peek.
 
 ###  🔹 Código relevante
 
@@ -106,23 +110,60 @@ for i, dato in enumerate(datos):
 ```
 
 ### 🌐 React Three Fiber (App.jsx)
+Utiliza el hook useFrame de React Three Fiber para ejecutar una función en cada frame del renderizado. Si el parámetro animateRotation está activado, se aplica una rotación incremental en el eje Y a todo el grupo de objetos (groupRef). Esto genera una rotación suave y constante de la escena 3D.
 
-
+La generación dinámica de objetos se realiza mediante un mapeo (map) sobre el array base rawData, creando un nuevo arreglo data cuyas propiedades —posición, color, rotación y escala— se ajustan en tiempo real según los controles definidos en la interfaz. Esto permite modificar el espaciado entre objetos, aplicar un color uniforme, alternar entre rotación aleatoria o fija, y definir un tamaño base común, logrando así una visualización paramétrica y flexible.
 
 ```jsx
+// Animación por frame y mapeo dinámico de objetos 3D
+useFrame(() => {
+  if (animateRotation && groupRef.current) {
+    groupRef.current.rotation.y += 0.01
+  }
+})
+
+const data = rawData.map((item, i) => ({
+  ...item,
+  position: [i * spacing, 0, 0],
+  color: colorBase,
+  rotation: randomizeRotation ? Math.random() * Math.PI : item.rotation,
+  scale: baseSize,
+}))
+```
+Este bloque define los parámetros ajustables desde la interfaz de usuario. Se pueden cambiar en tiempo real sin recargar la escena:
+
+```jsx
+const {
+  globalScale,
+  geometryType,
+  baseSize,
+  spacing,
+  colorBase,
+  lightIntensity,
+  randomizeRotation,
+  animateRotation,
+} = useControls({
+  globalScale: { value: 1, min: 0.1, max: 3 },
+  geometryType: { options: { Cube: 'cube', Sphere: 'sphere' } },
+  baseSize: { value: 1, min: 0.2, max: 3 },
+  spacing: { value: 2, min: 1, max: 5 },
+  colorBase: '#ffaa00',
+  lightIntensity: { value: 1, min: 0, max: 10 },
+  randomizeRotation: false,
+  animateRotation: false,
+})
 
 ```
 
-
 ## 📊 Resultados Visuales
 ### 🐍 Python   
-![Resultado Processing](resultados/PythonResultado.gif)
+![Resultado Python](resultados/PythonResultado.gif)
 
 
 
 ### 🌐 React  
 
-![Resultado Processing](resultados/PythonResultado.gif)
+![Resultado Processing](resultados/ThreejsResultado.gif)
 
 
 
@@ -130,8 +171,13 @@ for i, dato in enumerate(datos):
 
 🧩 Prompts Usados
 
-
-
+- Genera una lista de 20 coordenadas aleatorias en 3D dentro de un cubo de lado 10 usando numpy.
+- A partir de una lista de puntos 3D, crea una esfera de radio variable en cada punto usando vedo.
+- Recorre un array de puntos y genera una malla de cubos o cilindros alternando entre ellos con un condicional.
+- Exporta la escena completa como archivo .OBJ utilizando vedo.write('escena.obj').
+- Crear una escena 3D donde 10 objetos se generen dinámicamente desde datos con forma, posición y color controlables
+- Agrega animación de rotación al grupo completo si se activa un parámetro booleano
+- Dame mejores estilos CSS para que el canvas ocupe todo y tenga una estética profesional
 
 ---
 
@@ -139,4 +185,9 @@ for i, dato in enumerate(datos):
 
 Reforcé mi comprensión sobre cómo la programación puede usarse para automatizar tareas de modelado que serían repetitivas manualmente, permitiendo crear escenas complejas o variadas simplemente modificando un archivo de datos de entrada. Aprender a interactuar con diferentes bibliotecas 3D de Python (vedo, trimesh, open3d) y entender sus fortalezas y cómo convertir datos entre ellas fue un punto clave.
 
+Ademas practique el del renderizado 3D en la web de forma declarativa usando React Three Fiber, y cómo los datos pueden controlarse en tiempo real gracias a herramientas como Leva. El poder generar escenas de forma dinámica desde listas de datos abre muchas posibilidades en visualización interactiva, simulaciones y prototipos rápidos.
+
+Me parecio bastante interesante ver cómo pequeños parámetros pueden alterar por completo la escena, y cómo combinar animación con control de interfaz en tiempo real. Mejoraría en el futuro la estructura de los datos, permitiendo cargarlos desde un archivo JSON o API externa, y consideraría exportar las escenas como GLTF o usarlas en entornos más complejos como WebXR.
+
 La parte más desafiante y en la que tuve varios probleas due el uso de trimesh y open3d, para la exportacion de archivos, ya que muchas funciones importantes para realizar la exportacion eran de versiones muy anteirors, ademas de eso me parecio bastante interesante  ver cómo una simple tabla de datos CSV se transformaba en una visualización 3D tangible. El principal desafío técnico radicó en comprender las diferentes representaciones internas de las mallas en cada biblioteca (especialmente cómo definen las caras/triángulos) y asegurar que las conversiones y exportaciones se realizaran correctamente para obtener archivos válidos en formatos estándar como OBJ, STL y PLY. La depuración de problemas de exportación o conversión requirió atención a los detalles de los tipos de datos y estructuras esperadas por cada función.
+
