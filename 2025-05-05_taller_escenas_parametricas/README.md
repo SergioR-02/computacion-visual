@@ -10,6 +10,8 @@
 
 El objetivo principal de este taller es aprender a generar objetos y escenas 3D de manera programática utilizando Python. Se busca explorar cómo crear geometría 3D flexiblemente a partir de datos estructurados (como archivos CSV o JSON), empleando bucles y condicionales para controlar parámetros como posición, forma, tamaño y color, y finalmente exportar las escenas resultantes a formatos estándar como OBJ, STL o PLY.
 
+Ademas crear escenas 3D programadas a partir de datos estructurados, listas de coordenadas o parámetros, utilizando React Three Fiber y Leva. A través de código y parametrización dinámica, se explora la creación flexible de geometría en tiempo real, permitiendo modificar propiedades como posición, escala, rotación y color.
+
 ---
 
 ## 🧠 Conceptos Aprendidos
@@ -25,6 +27,13 @@ Lista de conceptos clave aplicados en el taller:
 *   **Bibliotecas Python 3D:** Uso práctico de `vedo`, `trimesh` y `open3d` para crear, visualizar y manipular mallas 3D.
 *   **Manejo de Datos:** Lectura y procesamiento de archivos CSV/JSON con las bibliotecas `csv` y `json`, y uso de `numpy` para operaciones numéricas.
 *   **Exportación de Formatos 3D:** Guardar las escenas/objetos generados en formatos estándar de la industria como `.obj`, `.stl`, `.ply`.
+- Uso de `React Three Fiber` para renderizado 3D declarativo con React.
+- Generación programática de geometrías 3D a partir de datos.
+- Control dinámico de propiedades mediante `Leva`.
+- Manejo de animaciones con `useFrame`.
+- Estilización y uso completo del `canvas` con CSS.
+- Renderizado condicional de geometrías (`box`, `sphere`).
+- Organización de escenas 3D con `group`, `mesh` y luces.
 
 ---
 
@@ -41,17 +50,21 @@ Especifica los entornos usados:
     *   `csv`: Para leer datos desde archivos CSV.
     *   `json`: (Opcional, si se usara JSON) Para leer datos desde archivos JSON.
     *   `os`: Para manejo de rutas de archivos y directorios.
-
+- React + Vite
+- Three.js / React Three Fiber
+- Leva (para controles de UI)
+- CSS personalizado
+- Peek / OBS Studio (para captura de GIF)
 
 ---
 
 ## 📁 Estructura del Proyecto
 ```
 2025-05-05_taller_escenas_parametricas/
-├── threejs/
-├── datos/         # Archivo de datos de entrada
+├── threejs/       # Archivo de threejs
 ├── python/        # Notebook con el código del taller
-│ ├── exports/     # Carpeta con los archivos 3D exportados
+│ └── exports/     # Carpeta con los archivos 3D exportados
+├── datos/         # Archivo de datos de entrada
 ├── resultados/    # Carpeta para resultados visuales
 └── README.md      # Este archivo de documentación
 ```
@@ -189,5 +202,5 @@ Ademas practique el del renderizado 3D en la web de forma declarativa usando Rea
 
 Me parecio bastante interesante ver cómo pequeños parámetros pueden alterar por completo la escena, y cómo combinar animación con control de interfaz en tiempo real. Mejoraría en el futuro la estructura de los datos, permitiendo cargarlos desde un archivo JSON o API externa, y consideraría exportar las escenas como GLTF o usarlas en entornos más complejos como WebXR.
 
-La parte más desafiante y en la que tuve varios probleas due el uso de trimesh y open3d, para la exportacion de archivos, ya que muchas funciones importantes para realizar la exportacion eran de versiones muy anteirors, ademas de eso me parecio bastante interesante  ver cómo una simple tabla de datos CSV se transformaba en una visualización 3D tangible. El principal desafío técnico radicó en comprender las diferentes representaciones internas de las mallas en cada biblioteca (especialmente cómo definen las caras/triángulos) y asegurar que las conversiones y exportaciones se realizaran correctamente para obtener archivos válidos en formatos estándar como OBJ, STL y PLY. La depuración de problemas de exportación o conversión requirió atención a los detalles de los tipos de datos y estructuras esperadas por cada función.
+La parte más desafiante y en la que tuve varios probleas due el uso de trimesh y open3d, para la exportacion de archivos, ya que muchas funciones importantes para realizar la exportacion eran de versiones muy anteriores, ademas de eso me parecio bastante interesante  ver cómo una simple tabla de datos CSV se transformaba en una visualización 3D tangible. El principal desafío técnico radicó en comprender las diferentes representaciones internas de las mallas en cada biblioteca (especialmente cómo definen las caras/triángulos) y asegurar que las conversiones y exportaciones se realizaran correctamente para obtener archivos válidos en formatos estándar como OBJ, STL y PLY. **La depuración de problemas de exportación o conversión requirió atención a los detalles de los tipos de datos y estructuras esperadas por cada función.**
 

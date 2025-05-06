@@ -170,6 +170,10 @@ export default function ModelViewer({ format, onModelLoaded }) {
 
 ## 📊 Resultados Visuales
 ### 🐍 Python   
+
+#### 📐 Visualizacion de cada modelo y sus propiedades.
+![Resultado Python](resultados/ResultadosPython/VisualizacionModelos.gif)
+
 #### 📐 Análisis geométrico de un modelo
 ![Resultado Python](resultados/ResultadosPython/AnalisisPython.png)
 
